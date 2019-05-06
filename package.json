@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-basic",
+  "version": "1.0.0",
+  "description": "Node js Basic tutorial for beginner",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MdSamsuzzohaShayon/nodejs-basic-beginner-referance/tree/2_file_system"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "Shayon, Traversy media",
+  "license": "ISC"
+}
