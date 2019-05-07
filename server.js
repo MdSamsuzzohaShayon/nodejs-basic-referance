@@ -1,47 +1,51 @@
-const http = require('http');
-const fs = require('fs');
 
-
-// OFFICIAL EXAMPLE
+//BUILT IN MODULES 
+//const events = require('events');
 /*
-const hostname = '127.0.0.1';
-const port = 3000;
+const myEmmiter = new events.EventEmitter();
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World\n');
+myEmmiter.on('someEvent',function(sms){
+    console.log(sms);
+    
 });
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+myEmmiter.emit('someEvent', 'This event is emitted');
 */
 
 
+
+
+
+
+
+
+//INHERITING IN JS ULING UTIL MODULE
 /*
-const server = http.createServer((req, res)=>{
-    console.log(req.httpVersion);
-    res.statusCode = 200;
-    res.writeHead(200, { 'Content-Type': 'text/html' });
+const util = require('util');
+let Person = function(name){
+    this.name = name;
+};
 
-    // LETTER ON DISCUSS ABOUT FS
-    const myReadStream = fs.createReadStream(__dirname + '/index.html','utf8');
-    myReadStream.pipe(res);
-    
-});*/
+util.inherits(Person, events.EventEmitter);
 
-
-
-// Returns content-type = text/plain
-const server = http.createServer((req, res)=>{
-    console.log(req);    
-    res.setHeader('Content-Type', 'text/html');
-    res.setHeader('X-Foo', 'foo');
-    res.writeHead(200, {'Content-Type':'text/plain'});
-    res.end('ok');
-})
+let james = new Person('james');
+let mary = new Person('mary');
+let ryu = new Person('ryu');
+//USING ARRAY
+let people = [james,mary,ryu];
 
 
-server.listen(3000, 'localhost');
-console.log("Server is running");
+
+//RENDERING MULTIPLE OBJECT
+people.forEach(function(person){
+    person.on('speak', function(sms){
+        console.log(person.name+ ' Said '+ sms);
+        
+    });
+});
+
+
+james.emit('speak','hey dudes');
+james.emit('speak','I want a curry');
+
+*/
