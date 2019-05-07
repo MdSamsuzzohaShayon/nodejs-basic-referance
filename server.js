@@ -2,46 +2,51 @@ const http = require('http');
 const fs = require('fs');
 
 
-// OFFICIAL EXAMPLE
-/*
-const hostname = '127.0.0.1';
-const port = 3000;
-
 const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World\n');
-});
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
-*/
-
-
-/*
-const server = http.createServer((req, res)=>{
-    console.log(req.httpVersion);
-    res.statusCode = 200;
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-
-    // LETTER ON DISCUSS ABOUT FS
-    const myReadStream = fs.createReadStream(__dirname + '/index.html','utf8');
-    myReadStream.pipe(res);
-    
-});*/
-
-
-
-// Returns content-type = text/plain
-const server = http.createServer((req, res)=>{
-    console.log(req);    
-    res.setHeader('Content-Type', 'text/html');
-    res.setHeader('X-Foo', 'foo');
+    // CREATING JS OBJECT
+    /*
     res.writeHead(200, {'Content-Type':'text/plain'});
-    res.end('ok');
-})
+    let obj = {
+        "Messi" : "FC Barcelona",
+        "Neymar JR": "Paris Saint Germain",
+        "Ronaldo": "Juventus"
+    }
 
+    // OBJECT IN JSON FORMAT
+    res.end(JSON.stringify(obj));
+    */
+
+    if (req.url === '/home' || req.url === '/') {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/html');
+        fs.createReadStream(__dirname + '/index.html').pipe(res);
+    } else if (req.url === '/contract') {
+        res.writeHead(200, {
+            'Content-Type': 'text/html'
+        });
+        fs.createReadStream(__dirname + '/contract.html').pipe(res);
+    } else if (req.url === '/api/ninjas') {
+        let ninjas = [{
+                name: 'Md SHayon',
+                age: 22
+            },
+            {
+                name: 'Khokon',
+                age: 23
+            },
+        ];
+        res.writeHead(200, {
+            'Content-Type': 'application/json'
+        });
+        res.end(JSON.stringify(ninjas));
+    } else {
+        res.writeHead(404, {
+            'Content-Type': 'text/html'
+        });
+        fs.createReadStream(__dirname + '/404.html').pipe(res);
+    }
+});
 
 server.listen(3000, 'localhost');
-console.log("Server is running");
+console.log("working");
