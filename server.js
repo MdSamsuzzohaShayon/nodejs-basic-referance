@@ -1,47 +1,60 @@
-const http = require('http');
 const fs = require('fs');
 
+console.log(__dirname);
 
-// OFFICIAL EXAMPLE
-/*
-const hostname = '127.0.0.1';
-const port = 3000;
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World\n');
+// READ FILE 
+const read = fs.readFileSync('read_file.txt', 'utf8');
+console.log(read);
+
+
+// WRITE FILE
+fs.writeFileSync('write.txt', read, err=> {
+    if (err) throw err;
+    console.log('The file has beed saved');    
 });
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
-*/
 
-
+//DELETING FILE
 /*
-const server = http.createServer((req, res)=>{
-    console.log(req.httpVersion);
-    res.statusCode = 200;
-    res.writeHead(200, { 'Content-Type': 'text/html' });
+fs.unlink('write.txt', err=>{
+    if(err) throw err;
+    console.log(' The filehas been deleted');
+});*/
 
-    // LETTER ON DISCUSS ABOUT FS
-    const myReadStream = fs.createReadStream(__dirname + '/index.html','utf8');
-    myReadStream.pipe(res);
+
+// DIRECTRY
+// fs.mkdirSync('file');
+// fs.rmdirSync('file');
+fs.mkdir('stuff', () => {
+    fs.readFile('read_file.txt', () => {
+        fs.writeFile('./stuff/writeme.txt', read, err => console.log(read));
+    })
+});
+
+
+
+
+//WE CAN NOT REMOVE OR DELETE A DIRECTORY WHICH HAS SOME FILE. TO DELETE THAT WE HAVE TO DELETE THOSE FILE FIRST
+//fs.rmdirSync('stuff');
+/*fs.unlink('./stuff/writeme.txt',(err,data){
+    fs.rmdir('stuff');
+})*/
+
+
+
+
+
+//BUFFER STREAM, READABLE STREAM AND WRITEABLE STREAM
+const myReadStream = fs.createReadStream(__dirname + '/readme.txt','utf8');
+let myWriteStream = fs.createWriteStream(__dirname + '/writeme.txt');
+
+/*myReadStream.on('data',function(chunk){
+    console.log('new chunk receved');
+    console.log(chunk);
+    myWriteStream.write(chunk);
     
 });*/
 
 
-
-// Returns content-type = text/plain
-const server = http.createServer((req, res)=>{
-    console.log(req);    
-    res.setHeader('Content-Type', 'text/html');
-    res.setHeader('X-Foo', 'foo');
-    res.writeHead(200, {'Content-Type':'text/plain'});
-    res.end('ok');
-})
-
-
-server.listen(3000, 'localhost');
-console.log("Server is running");
+//myReadStream.pipe(myWriteStream);
