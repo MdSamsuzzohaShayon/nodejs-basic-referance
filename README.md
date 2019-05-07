@@ -26,4 +26,3 @@ The HTTP interfaces in Node.js are designed to support many features of the prot
  - [read file](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html#fs_fs_read_fd_buffer_offset_length_position_callback)
  - [Write sync file](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html#fs_fs_writefile_file_data_options_callback)
  - [Rirectory](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html#fs_fs_mkdir_path_options_callback)
- - []
