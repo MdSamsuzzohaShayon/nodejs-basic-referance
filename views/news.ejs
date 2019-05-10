@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>news</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<% include partials/nav.ejs %>
+    <h2>News</h2>
+    <a href="#">News from 2018</a>
+    <p>
+        Node.js 11.0.0 is here! This is the newest Node.js Current Release line with a focus primarily on improving internals, performance, and an update to V8 7.0.
+    </p>
+        <h3><%= qs.dept %></h3>
+        <h3><%= qs.person %></h3>
+
+
+    <form id="contract-form" method="POST" action="/news">
+        <label for="who"> Who do want to news? </label>
+        <input type="text" name="who" value="<%= qs.person %>">
+        <label for="department"> Which department? </label>
+        <input type="text" name="department" value="<%= qs.dept %>">
+        <label for="email">Your email </label>
+        <input type="email" name="email">
+        <input type="submit" name="submit">
+    </form>
+</body>
+</html>

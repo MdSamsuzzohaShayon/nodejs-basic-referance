@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>EJS</title>
+    <style>
+    body{
+        
+        background: rgb(143, 143, 143);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(26, 0, 37);
+        padding: 30px;
+    }
+    h2{
+        font-size: 48px;
+        text-transform: uppercase;
+        text-align: center;
+        color: White;
+    }
+    a{
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+    p{
+        font-size: 16px; 
+        text-align: center;
+    }
+
+    ul{
+        list-style: none;
+    }
+    </style>
+</head>
+<body>
+    <% include partials/nav.ejs %>
+
+    <h2>Ejs# <%= person %></h2>
+    <a href="#">EJS -- Embedded JavaScript templates</a>
+    <p>
+        'E' is for 'effective'. EJS is a simple templating language that lets you generate HTML markup with plain JavaScript. No religiousness about how to organize 
+    </p>
+    <p><strong>Age: </strong> <%= data.age %></p>
+    <p><strong>Job: </strong> <%= data.job %></p>
+    <h2>Hobbies</h2>
+    <ul>
+        <% data.hobbies.forEach((item)=>{ %>
+            <li> <%= item %> </li>
+       <% }); %>
+    </ul>
+</body>
+</html>
