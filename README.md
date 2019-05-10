@@ -43,4 +43,8 @@ The HTTP interfaces in Node.js are designed to support many features of the prot
  - [Handling events only once](https://nodejs.org/dist/latest-v12.x/docs/api/events.html#events_handling_events_only_once)
  - [Error events](https://nodejs.org/dist/latest-v12.x/docs/api/events.html#events_error_events)
  - [New Listener](https://nodejs.org/dist/latest-v12.x/docs/api/events.html#events_event_newlistener)
- - 
+
+## Sync / Async
+
+ - [Official docs](https://nodejs.org/de/docs/guides/blocking-vs-non-blocking/)
+ - [callback](https://nodejs.org/en/knowledge/getting-started/control-flow/what-are-callbacks/)
