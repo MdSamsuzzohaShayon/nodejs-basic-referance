@@ -19,3 +19,28 @@ The HTTP interfaces in Node.js are designed to support many features of the prot
  - [write head](https://nodejs.org/dist/latest-v12.x/docs/api/http.html#http_response_setheader_name_value)
  - [response end data callback](https://nodejs.org/dist/latest-v12.x/docs/api/http.html#http_response_end_data_encoding_callback)
  - [Server Listening](https://nodejs.org/dist/latest-v12.x/docs/api/net.html#net_server_listen)
+
+## File Systems
+
+ - [Official Docs](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html)
+ - [read file](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html#fs_fs_read_fd_buffer_offset_length_position_callback)
+ - [Write sync file](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html#fs_fs_writefile_file_data_options_callback)
+ - [Rirectory](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html#fs_fs_mkdir_path_options_callback)
+ - [Append file](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html#fs_fs_appendfile_path_data_options_callback)
+ - [copy file](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html#fs_fs_copyfile_src_dest_flags_callback)
+ - [read stream](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html#fs_fs_createreadstream_path_options)
+ - [Delete file](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html#fs_fs_unlink_path_callback)
+
+## JSON
+
+ - [Docs](https://www.json.org/)
+ - [mozila docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+
+## Events
+
+ - [Official docs](https://nodejs.org/dist/latest-v12.x/docs/api/events.html)
+ - [Asynchronous vs. Synchronous](https://nodejs.org/dist/latest-v12.x/docs/api/events.html#events_asynchronous_vs_synchronous)
+ - [Handling events only once](https://nodejs.org/dist/latest-v12.x/docs/api/events.html#events_handling_events_only_once)
+ - [Error events](https://nodejs.org/dist/latest-v12.x/docs/api/events.html#events_error_events)
+ - [New Listener](https://nodejs.org/dist/latest-v12.x/docs/api/events.html#events_event_newlistener)
+ - 
