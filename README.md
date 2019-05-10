@@ -43,4 +43,13 @@ The HTTP interfaces in Node.js are designed to support many features of the prot
  - [Handling events only once](https://nodejs.org/dist/latest-v12.x/docs/api/events.html#events_handling_events_only_once)
  - [Error events](https://nodejs.org/dist/latest-v12.x/docs/api/events.html#events_error_events)
  - [New Listener](https://nodejs.org/dist/latest-v12.x/docs/api/events.html#events_event_newlistener)
- - 
+
+## Modules / Import exports
+
+ - [Modules](https://nodejs.org/dist/latest-v12.x/docs/api/modules.html)
+ - [module.exports](https://nodejs.org/dist/latest-v12.x/docs/api/modules.html#modules_module_exports)
+ - [module.builtinModules](https://nodejs.org/dist/latest-v12.x/docs/api/modules.html#modules_module_builtinmodules)
+ - [Loading from node_modules Folders](https://nodejs.org/dist/latest-v12.x/docs/api/modules.html#modules_loading_from_node_modules_folders)
+ - [exports object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+ - [export](https://nodejs.org/dist/latest-v12.x/docs/api/modules.html#modules_exports)
+ - [The module object](https://nodejs.org/dist/latest-v12.x/docs/api/modules.html#modules_the_module_object)
