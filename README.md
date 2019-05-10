@@ -53,3 +53,12 @@ The HTTP interfaces in Node.js are designed to support many features of the prot
  - [exports object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
  - [export](https://nodejs.org/dist/latest-v12.x/docs/api/modules.html#modules_exports)
  - [The module object](https://nodejs.org/dist/latest-v12.x/docs/api/modules.html#modules_the_module_object)
+
+
+## Query string
+
+ - [Official docs](https://nodejs.org/dist/latest-v12.x/docs/api/querystring.html)
+ - [querystring.decode()](https://nodejs.org/dist/latest-v12.x/docs/api/querystring.html#querystring_querystring_decode)
+ - [querystring.encode()](https://nodejs.org/dist/latest-v12.x/docs/api/querystring.html#querystring_querystring_encode)
+ - [querystring.stringify(obj[, sep[, eq[, options]]])](https://nodejs.org/dist/latest-v12.x/docs/api/querystring.html#querystring_querystring_stringify_obj_sep_eq_options)
+ 
