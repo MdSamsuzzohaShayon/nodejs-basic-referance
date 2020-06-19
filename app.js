@@ -1,47 +1,46 @@
-/* let time =0 ;
-let timer = setInterval(function(){
-    time += 2;
-    console.log(`${time} sec have passed`);
-    if(time > 6){
-        clearInterval(timer);
-    }
-    
-}, 2000); */
+// https://nodejs.org/en/knowledge/advanced/buffers/how-to-use-buffers/
+// The Buffer class in Node.js is designed to handle raw binary data. 
 
 
-// console.log(__dirname);
-// console.log(__filename);
-
-
-
-
-
-//CUSTOM MODULE
 /*
-const stuff = require('./stuff');
-console.log(stuff.counter(['shayon', 'khokon', 'tanvir']));
-console.log(stuff.adder(3+4));
-console.log(stuff.adder(stuff.pi, 6));
+// BINARY
+const buffer = Buffer.alloc(8);
+// This will print out 8 bytes of zero:
+console.log(buffer);
+
+
+
+const bfrBase64 = Buffer.from('Hi I am buffer', 'base64');
+// This will print out a chain of values in base64:
+console.log(bfrBase64);
+
+
+
+const bfrUtf_8 = Buffer.from('Hi I am buffer', 'utf-8');
+// This will print out a chain of values in utf-8:
+console.log(bfrUtf_8);
+
+
+
+const bfrBinary= Buffer.from('Hi I am buffer', 'binary');
+// This will print out a chain of values in utf-8:
+console.log(bfrBinary);
+
+
+
+// JSON PERSING
+let parsingData = "This will parse";
+console.log(JSON.parse(parsingData));
 */
 
 
 
 
+// CHARECTER ENCODING
 
-
-
-//BUILT IN MODULES 
-//const events = require('events');
-/*
-const myEmmiter = new events.EventEmitter();
-
-myEmmiter.on('someEvent',function(sms){
-    console.log(sms);
-    
-});
-
-myEmmiter.emit('someEvent', 'This event is emitted');
-*/
+let buf = Buffer.from('Hello world', 'utf-8');
+// console.log(buf.toJSON());
+console.log(buf.toString('hex'));
 
 
 
@@ -50,36 +49,6 @@ myEmmiter.emit('someEvent', 'This event is emitted');
 
 
 
-//INHERITING IN JS ULING UTIL MODULE
-/*
-const util = require('util');
-let Person = function(name){
-    this.name = name;
-};
-
-util.inherits(Person, events.EventEmitter);
-
-let james = new Person('james');
-let mary = new Person('mary');
-let ryu = new Person('ryu');
-//USING ARRAY
-let people = [james,mary,ryu];
-
-
-
-//RENDERING MULTIPLE OBJECT
-people.forEach(function(person){
-    person.on('speak', function(sms){
-        console.log(person.name+ ' Said '+ sms);
-        
-    });
-});
-
-
-james.emit('speak','hey dudes');
-james.emit('speak','I want a curry');
-
-*/
 
 
 
