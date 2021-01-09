@@ -11,3 +11,12 @@
  - Convert typescript to javascript `tsc app.ts`
  - Watch continuously `tsc app.ts -w`
  - Create a config file for typescript `tsc --init`
+ - Now RUn the command `tsc`
+ - Install essential dev dependencies
+
+ ```
+ npm install -D typescript ts-node nodemon @types/node @types/express
+ ```
+ - Convert javascript code to typescript code for node `npm run build`
+ - Running server with typescript `npm run dev`
+ - Running converted js file `npm start`
